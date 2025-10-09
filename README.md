@@ -24,14 +24,4 @@ The challenge is to:
 ```bash
 < file1 cmd1 | cmd2 > file2
 
-##🎯 Objective
 
-The main objective of the project is to gain a deep understanding of:
-
-How UNIX pipes and file descriptors work.
-
-How to create and manage child processes using fork and execve.
-
-How to handle errors, memory, and process synchronization safely.
-
-In short, this project teaches you how to programmatically replicate shell behavior and manage inter-process communication — a core concept in systems programming and operating systems.
