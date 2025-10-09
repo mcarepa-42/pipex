@@ -1,45 +1,37 @@
-# 42 Projects: Philosophers & Pipex
-
----
-
-## 🧠 Philosophers
-> *“I never thought philosophy would be so deadly.”*
-
-The **Philosophers** project is part of the **42 curriculum**, exploring **multithreading**, **synchronization**, and **concurrency** in C.  
-It is inspired by the classic *Dining Philosophers Problem*, which teaches resource sharing and concurrency control.
-
-### 🪑 Project Goal
-Simulate a group of philosophers sitting around a table with a bowl of spaghetti.  
-Each philosopher alternates between **eating**, **sleeping**, and **thinking**, but must pick up **two forks** to eat — one on each side.
-
-**Objectives:**
-- Prevent **deadlocks**.
-- Avoid **data races**.
-- Ensure no philosopher **starves**.
-- Accurately log philosopher states.
-
-### ⚙️ Technical Overview
-- Written in **C**, following the **42 Norm**.
-- **Mandatory part:** Uses **threads** and **mutexes**.
-- **Bonus part:** Uses **processes** and **semaphores**.
-- State logs:
-  - Taking forks
-  - Eating
-  - Sleeping
-  - Thinking
-  - Dying
-
----
-
-## 🛠 Pipex
+# 🛠 Pipex  
 > *Explore UNIX pipes by implementing them in C.*
 
-The **Pipex** project (42 curriculum) teaches **UNIX pipes** and **process handling**.  
-The goal is to replicate shell behavior by connecting commands with **pipes** and handling file input/output.
+The **Pipex** project is part of the **42 curriculum** and focuses on understanding **UNIX pipes**, **process management**, and **I/O redirection** in C.  
+It is inspired by how shell commands connect through pipes and how data flows between processes.
 
-### 🪑 Project Goal
-Your program should simulate the following shell command:
+---
 
+## 🪑 Project Goal
+You must simulate shell command execution by connecting commands with **pipes**.  
+Each command reads input from a file or previous command and outputs to a file or next command.  
+
+The challenge is to:
+- Properly handle **forks, execve, and pipes**.  
+- Correctly manage **file descriptors** and **redirections**.  
+- Prevent **memory leaks** and unexpected crashes.  
+- Replicate shell behavior **exactly**, including chaining multiple commands.
+
+---
+
+## ⚙️ Technical Overview
+- Written in **C**, following the **42 Norm**.  
+- **Mandatory part:** Handle a single pipe connecting two commands:  
 ```bash
 < file1 cmd1 | cmd2 > file2
 
+##🎯 Objective
+
+The main objective of the project is to gain a deep understanding of:
+
+How UNIX pipes and file descriptors work.
+
+How to create and manage child processes using fork and execve.
+
+How to handle errors, memory, and process synchronization safely.
+
+In short, this project teaches you how to programmatically replicate shell behavior and manage inter-process communication — a core concept in systems programming and operating systems.
